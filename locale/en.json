@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Mark Session Unread",
+    "description": "Mark a session as unread or read from its sidebar \"...\" menu. Marks are stored on the Host, so every device sees the same state; opening a session reads it."
+  }
+}

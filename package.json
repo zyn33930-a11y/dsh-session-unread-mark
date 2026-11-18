@@ -1,0 +1,53 @@
+{
+  "name": "@zyn333/dsh-session-unread-mark",
+  "description": "DSH Web plugin: mark sessions as unread from the sidebar \"...\" menu; marks are stored on the Host and shared by every device",
+  "version": "0.3.1",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "unread"
+  ],
+  "homepage": "https://github.com/zyn33930-a11y/dsh-session-unread-mark#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyn33930-a11y/dsh-session-unread-mark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyn33930-a11y/dsh-session-unread-mark/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/host.js",
+  "exports": {
+    ".": "./lib/host.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/host.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  }
+}

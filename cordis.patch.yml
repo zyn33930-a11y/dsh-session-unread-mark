@@ -1,0 +1,6 @@
+# Adds the unread-mark row: Host routes storing marks + the Web client menu entry.
+# Optional: `config: { file: /abs/path.json }` moves the marks file
+# (default $DSH_HOME/storages/session-unread-mark.json).
+- insert:
+    - id: session-unread-mark
+      name: '@zyn333/dsh-session-unread-mark'
